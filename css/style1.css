@@ -74,7 +74,7 @@ header nav ul li a:hover {
 .hero {
 	
     position: relative;
-    height: 65vh; /* Controla la altura de la sección */
+    height: 50vh; /* Controla la altura de la sección */
      background-size: cover;
     background-position: center;
     display: block;
