@@ -16,15 +16,14 @@ body {
 header {
     background-color: white; /* Fondo blanco */
     width: 100%; /* Asegura que ocupe todo el ancho */
-    padding: 10px 20px; /* Espaciado para el contenedor */
     display: flex;
     justify-content: space-between; /* Espacia el logo y los enlaces */
     align-items: center; /* Centra el contenido verticalmente */
     border-top: 4px solid  #ff9900; /* Línea superior burdeos */
-    border-bottom: 6px solid #333333;  /* Línea inferior gris*/
+    border-bottom:4px solid  #ff9900; /* Línea inferior gris*/
     position: relative; /* Necesario para el pseudo-elemento */
-
-}
+background-color: rgba(0, 53, 98) 
+  }
 
 /* Pseudo-elemento para redondear solo las esquinas internas */
 header::before {
@@ -58,7 +57,7 @@ header nav ul {
     gap: 20px;
 }
 header nav ul li a {
-    color: #333333; /* Color inicial */
+    color: white; /* Color inicial */
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
@@ -74,7 +73,7 @@ header nav ul li a:hover {
 .hero {
 	
     position: relative;
-    height: 65vh; /* Controla la altura de la sección */
+    height: 40vh; /* Controla la altura de la sección */
      background-size: cover;
     background-position: center;
     display: block;
@@ -104,7 +103,7 @@ header nav ul li a:hover {
 	
     position: absolute;
     bottom: 0;
-    width: 70%;
+    width: 50%;
 	height: 80%;
     background-color:  rgba(0, 53, 98, 0.75); /* Fondo azul semitransparente */
     color: white;
@@ -115,7 +114,7 @@ header nav ul li a:hover {
     justify-content: center;
     text-align: center;
     z-index: 1;
-	left: 20%;
+	left: 25%;
 	overflow: hidden; /* Asegura que no haya desbordamiento visual */
 	 word-wrap: break-word; /* Divide palabras largas */
     overflow-wrap: break-word;
@@ -127,7 +126,7 @@ header nav ul li a:hover {
 }
 
 .hero-content h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 800;
   position: relative;
   display: inline-block;
@@ -152,7 +151,7 @@ header nav ul li a:hover {
   }
 }
 .hero-content p {
-    font-size: 1.2vw; /* Escala relativo al viewport */
+    font-size: 1vw; /* Escala relativo al viewport */
     margin-bottom: 0.5px;
 	 line-height: 2; 
 	 opacity: 0;
@@ -162,7 +161,7 @@ header nav ul li a:hover {
 
 .hero1-image {
     height: 100%; /* Imagen ocupando 3/4 de la sección */
-    background-image: url('../images/portada.jpg'); /* Ruta de la imagen */
+    background-image: url('../images/historia.png'); /* Ruta de la imagen */
     background-size: cover;
     background-position: right;
     width: 50%;
@@ -170,35 +169,51 @@ header nav ul li a:hover {
   margin-left: 10px; /* Opcional: para dar espacio al texto */
 }
 
-.hero1-content {
-	
-    position: absolute;
-    bottom: 0;
-    width: 70%;
-	height: 80%;
-    background-color:  rgba(255, 153, 0, 0.75); /* Fondo naranja semitransparente */
-    color: white;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 1;
-	left: 2%;
-	overflow: hidden; /* Asegura que no haya desbordamiento visual */
-	 word-wrap: break-word; /* Divide palabras largas */
-    overflow-wrap: break-word;
-	display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Alinea el texto */
-    
+.hero2-image {
+    height: 100%; /* Imagen ocupando 3/4 de la sección */
+    background-image: url('../images/servicio.png'); /* Ruta de la imagen */
+   background-size: cover;
+    background-position: center;
+    width: 50%;
+	z-index: 1; /* Establece un z-index más bajo que el del menú */
+}
+
+.hero3-image {
+    height: 100%; /* Imagen ocupando 3/4 de la sección */
+    background-image: url('../images/equipo.png'); /* Ruta de la imagen */
+   background-position: right;
+    width: 50%;
+	 float: right;
+  margin-left: 10px; /* Opcional: para dar espacio al texto */
 }
 
 
+.hero1-content {
+	
+    position: absolute;
+    top: 60%;                   /* coloca el borde superior al 50% */
+    left: 50%;                  /* coloca el borde izquierdo al 50% */
+    transform: translate(-50%, -50%); /* la mueve para que quede realmente centrada */
+    
+    width: 50%;
+    height: 80%;
+    background-color: rgba(255, 153, 0, 0.75); 
+    color: white;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    /* centra también el contenido dentro */
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
+}
+
 .hero1-content h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 800;
   position: relative;
   display: inline-block;
@@ -223,7 +238,7 @@ header nav ul li a:hover {
   }
 }
 .hero1-content p {
-    font-size: 1.2vw; /* Escala relativo al viewport */
+    font-size: 1vw; /* Escala relativo al viewport */
     margin-bottom: 0.5px;
 	 line-height: 2; 
 	 opacity: 0;
@@ -233,7 +248,6 @@ header nav ul li a:hover {
 
 
 .hero1-content .btn {
-    display: inline-block;
     background-color:  #003562;
     color: white;
     text-decoration: none;
@@ -245,6 +259,27 @@ header nav ul li a:hover {
 	  overflow: hidden; /* Asegura que no haya desbordamiento visual */
 	  margin-top: 0; /* Sin margen adicional encima del botón */
  white-space: nowrap; /* Evita que el texto del botón se divida en varias líneas */
+ 
+  display: flex;                  /* permite centrar contenido */
+  justify-content: center;        /* centra horizontalmente */
+  align-items: center;            /* centra verticalmente */
+  
+  padding: 12px 20px;             /* espacio interno */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;             /* asegura que las líneas de texto se centren */
+  
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  white-space: normal;            /* permite que el texto se parta en varias líneas */
+  word-wrap: break-word;          /* divide palabras largas si hace falta */
+  overflow-wrap: break-word;      /* asegura compatibilidad */
+  max-width: 300px;               /* opcional: para no hacerlo infinito */
+
 }
 
 .hero1-content .btn:hover {
@@ -271,6 +306,26 @@ header nav ul li a:hover {
 	  overflow: hidden; /* Asegura que no haya desbordamiento visual */
 	  margin-top: 0; /* Sin margen adicional encima del botón */
  white-space: nowrap; /* Evita que el texto del botón se divida en varias líneas */
+ 
+  display: flex;                  /* permite centrar contenido */
+  justify-content: center;        /* centra horizontalmente */
+  align-items: center;            /* centra verticalmente */
+  
+  padding: 12px 20px;             /* espacio interno */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;             /* asegura que las líneas de texto se centren */
+  
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  white-space: normal;            /* permite que el texto se parta en varias líneas */
+  word-wrap: break-word;          /* divide palabras largas si hace falta */
+  overflow-wrap: break-word;      /* asegura compatibilidad */
+  max-width: 300px;               /* opcional: para no hacerlo infinito */	
 }
 
 .hero-content .btn:hover {
@@ -637,10 +692,9 @@ footer nav ul li a:hover {
 
 /* Hero Section */
 .herocontacto {
-    position: relative;
-    height: 65vh; /* Controla la altura de la sección */
-    width: 100%;
-    background-size: cover;
+   position: relative;
+    height: 40vh; /* Controla la altura de la sección */
+     background-size: cover;
     background-position: center;
     display: block;
     justify-content: center;
@@ -658,33 +712,34 @@ footer nav ul li a:hover {
 }
 
 .herocontacto-image {
-    height: 75%; /* Imagen ocupando 3/4 de la sección */
+    height: 100%; /* Imagen ocupando 3/4 de la sección */
     background-image:url('../images/contacto.png');/* Ruta de la imagen */
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: 50%;
 	z-index: 1; /* Establece un z-index más bajo que el del menú */
 }
 
 .herocontacto-content {
  position: absolute;
-    bottom: 0;
-    width: 45%;
-	height: 50%;
-    background-color: rgba(189, 59, 59, 0.8); /* Fondo burdeos semitransparente */
+    top: 60%;                   /* coloca el borde superior al 50% */
+    left: 50%;                  /* coloca el borde izquierdo al 50% */
+    transform: translate(-50%, -50%); /* la mueve para que quede realmente centrada */
+    
+    width: 50%;
+    height: 80%;
+    background-color: rgba(255, 153, 0, 0.75); 
     color: white;
-    padding: 20px;
-    justify-content: center;
-    z-index: 1;
-	left: 5%;
-	overflow: hidden; /* Asegura que no haya desbordamiento visual */
-	 word-wrap: break-word; /* Divide palabras largas */
-    overflow-wrap: break-word;
-	display: flex;
+    padding: 2px;
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Alinea el texto */
-    gap: 0.1rem; /* Espaciado entre los elementos */
+    align-items: center;
+    justify-content: center;    /* centra también el contenido dentro */
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .herocontacto-content h1 {
