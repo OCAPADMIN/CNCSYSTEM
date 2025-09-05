@@ -161,7 +161,7 @@ header nav ul li a:hover {
 
 .hero1-image {
     height: 100%; /* Imagen ocupando 3/4 de la sección */
-    background-image: url('../images/historia.png'); /* Ruta de la imagen */
+    background-image: url('../images/servicio.png'); /* Ruta de la imagen */
     background-size: cover;
     background-position: right;
     width: 50%;
@@ -171,7 +171,7 @@ header nav ul li a:hover {
 
 .hero2-image {
     height: 100%; /* Imagen ocupando 3/4 de la sección */
-    background-image: url('../images/servicio.png'); /* Ruta de la imagen */
+    background-image: url('../images/historia.png'); /* Ruta de la imagen */
    background-size: cover;
     background-position: center;
     width: 50%;
